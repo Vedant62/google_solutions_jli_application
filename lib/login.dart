@@ -98,13 +98,13 @@ class LoginWithAadhaarPage extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.sizeOf(context).width * 0.85,
-                  height: MediaQuery.sizeOf(context).height * 0.305,
+                  height: MediaQuery.sizeOf(context).height * 0.401,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 15, 20, 0),
                     child: ListView(
                       padding: EdgeInsets.zero,
                       // scrollDirection: Axis.vertical,
@@ -300,11 +300,9 @@ class JLIButton2 extends StatelessWidget {
           ),
           minimumSize: MaterialStateProperty.all(Size(55, 55)),
         ),
-        child: Icon(
-          Icons.add,
-          color: Colors.black,
-          size: 24,
-        ),
+        child: Text("Log in",
+          style: GoogleFonts.openSans(),
+        )
       ),
 
     );
