@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:justice_link_app/signup_page.dart';
 
 import 'choose_lang_page.dart';
 import 'login.dart';
@@ -132,13 +133,11 @@ class LoginChoose extends StatelessWidget {
                   ),
                   child: Align(
                     alignment: AlignmentDirectional(0.00, -8.00),
-                    child: Text(
-                      'New user? Click here to <sign up>',
-                      textAlign: TextAlign.center,
-                      style:TextStyle(
-                        fontFamily: 'Readex Pro',
-                        letterSpacing: 1,
-                      ),
+                    child: TextButton( onPressed: () {Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => SignupPage()),
+                    );},
+                    child: Text('New user? Click here to <sign up>', style: GoogleFonts.openSans(fontSize: 15),),
+
                     ),
                   ),
                 ),
