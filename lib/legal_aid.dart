@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class RequestForLegalAid extends StatelessWidget {
   const RequestForLegalAid({super.key});
 
@@ -43,8 +44,7 @@ class RequestForLegalAid extends StatelessWidget {
                         children: [
                           Text(
                             'JusticeLink',
-                            style:TextStyle(
-                              fontFamily: 'Italiana',
+                            style:GoogleFonts.italiana(
                               color:
                               Colors.black,
                               fontSize: 22,
@@ -53,8 +53,7 @@ class RequestForLegalAid extends StatelessWidget {
                           ),
                           Text(
                             'INDIA',
-                            style: TextStyle(
-                              fontFamily: 'Julius Sans One',
+                            style: GoogleFonts.juliusSansOne(
                               color: Colors.black,
                               fontSize: 10,
                             ),
@@ -98,6 +97,7 @@ class RequestForLegalAid extends StatelessWidget {
                   Container(
                     width: 100,
                     height: 852,
+
                     decoration: BoxDecoration(
                       color:Color.fromARGB(255, 241, 244, 248),
                     ),

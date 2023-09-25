@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
@@ -38,8 +39,7 @@ class ProfilePage extends StatelessWidget {
                             children: [
                               Text(
                                 'JusticeLink',
-                                style:TextStyle(
-                                  fontFamily: 'Italiana',
+                                style:GoogleFonts.italiana(
                                   color: Colors.black,
                                   fontSize: 22,
                                   fontWeight: FontWeight.bold,
@@ -47,8 +47,7 @@ class ProfilePage extends StatelessWidget {
                               ),
                               Text(
                                 'INDIA',
-                                style: TextStyle(
-                                  fontFamily: 'Julius Sans One',
+                                style: GoogleFonts.juliusSansOne(
                                   color:Colors.black,
                                   fontSize: 10,
                                 ),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:justice_link_app/legal_aid.dart';
+import 'package:justice_link_app/legal_info.dart';
+import 'package:justice_link_app/profile_page.dart';
+import 'package:justice_link_app/rehab_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -84,10 +87,10 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: Align(
                             alignment: AlignmentDirectional(1.00, 0.00),
-                            child: Text(
-                              'Login as Lawyer',
-                              style: TextStyle(),
-                            ),
+                            // child: Text(
+                            //   'Login as Lawyer',
+                            //   style: TextStyle(),
+                            // ),
                           ),
                         ),
                       ),
@@ -168,8 +171,7 @@ class _HomePageState extends State<HomePage> {
                                         0, 10, 0, 0),
                                     child: Text(
                                       'FirstName LastName',
-                                      style:TextStyle(
-                                        fontFamily: 'Open Sans',
+                                      style:GoogleFonts.openSans(
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -188,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Color(0xFFD8B4A0),
                                 ),
                                 child: Text(
-                                  'xxxx xxxxx xxxx',
+                                  ' xxxx xxxxx xxxx',
                                   style:TextStyle(
                                     fontFamily: 'Open Sans',
                                     fontSize: 14,
@@ -203,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Color(0xFFD8B4A0),
                               ),
                               child: Text(
-                                'lorem ipsum',
+                                '    lorem ipsum',
                                 style: TextStyle(),
                               ),
                             ),
@@ -304,8 +306,9 @@ class _HomePageState extends State<HomePage> {
                                     Text("Account")
                                   ],
                                 ),
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () {Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (_) => ProfilePage()),
+                                );
                                 },
 
                                 style: ElevatedButton.styleFrom(
@@ -329,7 +332,9 @@ class _HomePageState extends State<HomePage> {
                                     ],
                                   ),
                                   onPressed: () {
-                                    print('Button pressed ...');
+                                    print(Navigator.of(context).push(
+                                      MaterialPageRoute(builder: (_) => LegalInfoPage()),
+                                    ),);
                                   },
 
                                   style: ElevatedButton.styleFrom(
@@ -374,8 +379,9 @@ class _HomePageState extends State<HomePage> {
                                   ),)
                                 ],
                               ),
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () {Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (_) => RehabPage()),
+                                );
                                 },
                                 // style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 215,122 ,97)), elevation: MaterialStateProperty.all<double>(3.0), ),
                                 style: ElevatedButton.styleFrom(
