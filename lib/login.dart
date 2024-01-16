@@ -3,8 +3,25 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'home_page.dart';
 import 'login_choose.dart';
-class LoginWithAadhaarPage extends StatelessWidget {
-  const LoginWithAadhaarPage({super.key});
+class LoginWithAadhaarPage extends StatefulWidget {
+  LoginWithAadhaarPage({super.key});
+
+  @override
+  State<LoginWithAadhaarPage> createState() => _LoginWithAadhaarPageState();
+}
+
+class _LoginWithAadhaarPageState extends State<LoginWithAadhaarPage> {
+
+  void loginUser() async{
+    if(aadharController.text.isNotEmpty && otpController.text.isNotEmpty){
+
+    }
+  }
+
+  // controllers
+  final TextEditingController aadharController = TextEditingController();
+  final TextEditingController otpController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -143,6 +160,7 @@ class LoginWithAadhaarPage extends StatelessWidget {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 0, 0, 10),
                                     child: TextFormField(
+                                      controller: aadharController,
                                         keyboardType: TextInputType.number,
                                       maxLength: 12,
 
@@ -191,6 +209,7 @@ class LoginWithAadhaarPage extends StatelessWidget {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 0, 0, 0),
                                     child: TextFormField(
+                                      controller: otpController,
                                       keyboardType: TextInputType.number,
                                       // controller: _model.textController2,
                                       autofocus: true,
@@ -450,9 +469,11 @@ class JLIButton2 extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () {
 // Navigate to the LoginChoose page
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (_) => HomePage()
-          ));
+//           Navigator.of(context).push(
+//             MaterialPageRoute(builder: (_) => HomePage()
+//           ));
+
+        loginUser();
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 0, 0, 0)),

@@ -107,24 +107,26 @@ class ChooseLangPage extends StatelessWidget {
                       padding: EdgeInsets.zero,
                       scrollDirection: Axis.vertical,
                       children: [
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
-                        JLIButton1(),
+                        JLIButton1(lang: 'English',),
+                        JLIButton1(lang: 'Hindi',),
+                        JLIButton1(lang: 'Bengali',),
+                        JLIButton1(lang: 'Gujarati',),
+                        JLIButton1(lang: 'Tamil',),
+                        JLIButton1(lang: 'Telugu',),
+                        JLIButton1(lang: 'Marathi',),
+                        JLIButton1(lang: 'Kannada',),
+                        JLIButton1(lang: 'Urdu',),
+                        JLIButton1(lang: 'Malayalam',),
+                        JLIButton1(lang: '',),
+                        JLIButton1(lang: '',),
+                        JLIButton1(lang: '',),
+                        JLIButton1(lang: '',),
+                        JLIButton1(lang: '',),
+                        JLIButton1(lang: '',),
+                        JLIButton1(lang: '',),
+                        JLIButton1(lang: '',),
+
+
                       ],
                     ),
                   ),
@@ -257,8 +259,8 @@ class ChooseLangPage extends StatelessWidget {
   }
 }
 class JLIButton1 extends StatelessWidget {
-  const JLIButton1({super.key});
-
+  const JLIButton1({super.key, required this.lang});
+   final String lang;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -282,11 +284,12 @@ class JLIButton1 extends StatelessWidget {
             ),
             minimumSize: MaterialStateProperty.all(Size(55, 55)),
           ),
-          child: Icon(
-            Icons.add,
-            color: Colors.black,
-            size: 24,
-          ),
+          child: Text(lang, style: GoogleFonts.lato(fontSize:12 ),)
+          // Icon(
+          //   Icons.add,
+          //   color: Colors.black,
+          //   size: 24,
+          // ),
         ),
 
     );
