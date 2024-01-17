@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   http:
 #    google_fonts: ^6.1.0
 
@@ -55,6 +56,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/card-image-1.png
+    - assets/card-image-2.png
+    - assets/card-image-3.png
+    - assets/card-image-4.png
+    - assets/card-image-5.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

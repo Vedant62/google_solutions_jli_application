@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'home_page.dart';
 import 'login_choose.dart';
+import 'new_home_page.dart';
 class LoginWithAadhaarPage extends StatefulWidget {
   LoginWithAadhaarPage({super.key});
 
@@ -469,11 +470,13 @@ class JLIButton2 extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () {
 // Navigate to the LoginChoose page
-//           Navigator.of(context).push(
-//             MaterialPageRoute(builder: (_) => HomePage()
-//           ));
+//         Navigator.of(context).pop();
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => NewHomePage()),
+          );
 
-        loginUser();
+
+          // loginUser();
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 0, 0, 0)),

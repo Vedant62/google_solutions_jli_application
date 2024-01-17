@@ -229,48 +229,55 @@ class LegalInfoPage extends StatelessWidget {
                           color: Color.fromARGB(255, 241, 244, 248),
                         ),
                         child: ListView(
+                          physics: NeverScrollableScrollPhysics(),
                           padding: EdgeInsets.zero,
                           scrollDirection: Axis.vertical,
                           children: [
-                            Container(
-                              width: MediaQuery.sizeOf(context).width,
-                              height: 37,
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 241, 244, 248),
-                              ),
-                              child: Align(
-                                alignment: AlignmentDirectional(-1.00, 1.00),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20, 0, 0, 0),
-                                  child: Text(
-                                    'Result:',
-                                    style: TextStyle(
-                                      fontFamily: 'Open Sans',
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Container(
+                                width: MediaQuery.sizeOf(context).width,
+                                height: 37,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 241, 244, 248),
+                                ),
+                                child: Align(
+                                  alignment: AlignmentDirectional(-1.00, 1.00),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        20, 0, 0, 0),
+                                    child: Text(
+                                      'Result:',
+                                      style: GoogleFonts.lato(
+                                        // fontFamily: 'Open Sans',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                            Container(
-                              width: MediaQuery.sizeOf(context).width,
-                              height: 292,
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 241, 244, 248),
-                              ),
-                              child: Align(
-                                alignment: AlignmentDirectional(-1.00, -1.00),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20, 5, 20, 20),
-                                  child: Text(
-                                    'orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop ',
-                                    style: TextStyle(
-                                      fontFamily: 'Fira Code',
-                                      color: Color(0xFF5C3625),
-                                      fontWeight: FontWeight.w600,
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Container(
+                                width: MediaQuery.sizeOf(context).width,
+                                height: 292,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 241, 244, 248),
+                                ),
+                                child: Align(
+                                  alignment: AlignmentDirectional(-1.00, -1.00),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        20, 5, 20, 20),
+                                    child: Text(
+                                      "Fundamental rights in India, outlined in the Constitution, encompass equality, freedom, protection against exploitation, and cultural and educational rights. The right to equality prohibits discrimination and promotes equal opportunities. Freedom rights include speech, assembly, association, and the practice of any profession. Protections against exploitation involve preventing human trafficking, forced labor, and child labor. Cultural and educational rights safeguard minority interests and grant them the right to establish educational institutions. Constitutional remedies empower citizens to seek judicial intervention for the enforcement of their fundamental rights.",
+                                      style: GoogleFonts.openSans(
+                                        // fontFamily: 'Fira Code',
+                                        color: Color(0xFF5C3625),
+                                        fontWeight: FontWeight.w400,
+                                      ),
                                     ),
                                   ),
                                 ),
