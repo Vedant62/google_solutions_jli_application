@@ -98,11 +98,12 @@ class LoginChoose extends StatelessWidget {
                           child: Text(
                             'LOGIN',
                             textAlign: TextAlign.center,
-                            style:TextStyle(
-                              fontFamily: 'Julius Sans One',
+                            style:GoogleFonts.juliusSansOne(
+                              // fontFamily: '',
+
                               fontSize: 38.18,
                               letterSpacing: 6,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w900,
                             ),
                           ),
                         ),
@@ -136,7 +137,7 @@ class LoginChoose extends StatelessWidget {
                     child: TextButton( onPressed: () {Navigator.of(context).push(
                       MaterialPageRoute(builder: (_) => SignupPage()),
                     );},
-                    child: Text('New user? Click here to <sign up>', style: GoogleFonts.openSans(fontSize: 15),),
+                    child: Text('New user? Click here to <sign up>', style: GoogleFonts.lato(fontSize: 15),),
 
                     ),
                   ),

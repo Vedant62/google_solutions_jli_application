@@ -26,9 +26,26 @@ class _NewHomePageState extends State<NewHomePage> {
           // BottomNavigationBarItem(icon: Icon(Icons.home_rounded,color: Colors.black,) , label: "", ),
           // BottomNavigationBarItem(icon: Icon(Icons.home_rounded),label: "Ho"),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.pin_drop_rounded,
-                color: Colors.black,
+
+              icon: GestureDetector(
+                onTap: (){
+                  Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=>NewHomePage()), (route) => false);
+                },
+                child: Icon(
+                  Icons.home_rounded,
+                  color: Colors.black,
+                ),
+              ),
+              label: "Home"),
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ConnectPage()),);
+                },
+                child: Icon(
+                  Icons.pin_drop_rounded,
+                  color: Colors.black,
+                ),
               ),
               label: "Nearby Aid"),
           BottomNavigationBarItem(
@@ -38,12 +55,7 @@ class _NewHomePageState extends State<NewHomePage> {
               ),
               label: "Messages"),
           // BottomNavigationBarItem(icon: Icon(Icons.calendar_month_rounded,color: Colors.black,) , label: "Events" ),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home_rounded,
-                color: Colors.black,
-              ),
-              label: "home")
+
         ],
       ),
       floatingActionButton: Container(
@@ -291,7 +303,7 @@ class _NewHomePageState extends State<NewHomePage> {
                             borderRadius: BorderRadius.circular(15)),
                       ),
                       Card(
-                        color: Color(0xFF8C7667),
+                        color: Color(0xffa0806c),
                         child: Container(
                           child: Column(
                             // crossAxisAlignment: CrossAxisAlignment.center,
@@ -299,10 +311,16 @@ class _NewHomePageState extends State<NewHomePage> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Placeholder(
-                                  fallbackHeight: 100,
-                                  fallbackWidth: 200,
-                                ),
+                                child: Container(
+                                  height: 100,
+                                  width: 200,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage("assets/card-image-6.png"),
+                                      fit: BoxFit.cover
+                                    )
+                                  ),
+                                )
                               ),
                               // Padding(
                               //   padding: const EdgeInsets.all(8.0),

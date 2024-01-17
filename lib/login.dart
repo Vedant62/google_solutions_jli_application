@@ -471,9 +471,7 @@ class JLIButton2 extends StatelessWidget {
         onPressed: () {
 // Navigate to the LoginChoose page
 //         Navigator.of(context).pop();
-          Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => NewHomePage()),
-          );
+          Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=>NewHomePage()), (route) => false);
 
 
           // loginUser();
